@@ -1,0 +1,14 @@
+.footer {
+  background-color: var(--ui-color-black);
+  background-image: url("/static/images/footer_bg_left.png"),
+    url("/static/images/footer_bg_right.png");
+  background-repeat: no-repeat;
+  background-position: top left, right;
+  min-height: 40vh;
+  padding: 4rem 0;
+  color: var(--ui-color-white);
+}
+
+.footer__navlink {
+  margin-bottom: 1rem;
+}

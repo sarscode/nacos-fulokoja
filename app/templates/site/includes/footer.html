@@ -1,0 +1,58 @@
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="lg-4 xs-12 mt-1">
+        <div>
+          <img
+            src="{{url_for('static',filename='images/nacos_fulokoja.png')}}"
+            alt="NACOS Federal University Lokoja Chapter"
+            srcset=""
+          />
+        </div>
+        <p class="mt-1">
+          Nigeria Association of Computing Students (NACOS) is the Umbrella body
+          for students studying Computer Science, Computer Engineering,
+          Information Systems, Cyber Security and all IT related courses in
+          Nigeria.
+        </p>
+      </div>
+      <div class="lg-4 md-6 row sm-6 xs-12 mt-1">
+        <div class="xs-6">
+          <h3>Quick Links</h3>
+          <div class="flex column">
+            <a href="#" class="footer__navlink">About Us</a>
+            <a href="#" class="footer__navlink">Executives</a>
+            <a href="#" class="footer__navlink">Events</a>
+            <a href="#" class="footer__navlink">Blog</a>
+            <a href="#" class="footer__navlink">Contact Us</a>
+          </div>
+        </div>
+        <div class="xs-6">
+          <h3>Membership</h3>
+          <div class="flex column">
+            <a href="#" class="footer__navlink">Register</a>
+            <a href="#" class="footer__navlink">Login</a>
+            <a href="#" class="footer__navlink">Pay Dues</a>
+          </div>
+        </div>
+      </div>
+      <div class="lg-4 md-6 sm-6 xs-12 mt-1">
+        <h3>Subscribe</h3>
+        <p>Join our newsletter to stay up to date on features and releases</p>
+        <form action="{{url_for('site_blueprint.subscribe')}}" method="post">
+          {{ form.csrf_token }}
+          <div>
+            {{form.email_address(class='full-width',
+            placeholder='you@fulokoja.edu.ng')}}
+          </div>
+          <button type="submit" class="btn primary mt-1">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <p class="mt-2 font-size-small font-weight-light">
+      &copy; 2023. NACOS | Federal University Lokoja Chapter
+    </p>
+  </div>
+</footer>
