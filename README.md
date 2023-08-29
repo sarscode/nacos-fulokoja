@@ -21,3 +21,17 @@ Create a `.env` file following the `.env.sample` file.
 ## Run the Application
 
 `python run.py` or `python3 run.py` or `py run.py`
+
+## Database
+
+Database is handled with [Flask-SQLAlchemy]() and [Flask-Migrate](https://flask-migrate.readthedocs.io/en/latest/)
+
+### Initialize the Database
+
+> flask db init
+
+### Run Database Migration To The Latest
+
+This will create all tables and relations in the database using the latest database migration
+
+> flask db upgrade

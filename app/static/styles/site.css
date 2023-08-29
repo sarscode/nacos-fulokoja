@@ -12,3 +12,7 @@
 .footer__navlink {
   margin-bottom: 1rem;
 }
+
+.footer__navlink:hover {
+  text-decoration: underline;
+}
