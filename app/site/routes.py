@@ -7,5 +7,5 @@ from app.site.forms import SubscribeForm
 def home():
     form = SubscribeForm()
     if form.validate_on_submit():
-        return redirect(url_for('site_blueprint.subscribe'))
+        return redirect(url_for('site_blueprint.home'))
     return render_template('site/index.html', form=form)
