@@ -1,3 +1,37 @@
 {% extends 'site/layouts/base.html' %}
 <!-- Page Title -->
 {% block title %} NACOS Fulokoja Chapter {% endblock title %}
+
+<!--  -->
+{% block content %}
+<div class="events">
+  <div class="container">
+    <div class="row align-center">
+      <div class="lg-4 flex align-center self-stretch">
+        <div class="flex">
+          <div class="flex column">
+            <span class="title">30 : </span>
+            <span>Day</span>
+          </div>
+          <div class="flex column">
+            <span class="title">08 :</span>
+            <span>Month</span>
+          </div>
+          <div class="flex column">
+            <span class="title">23</span>
+            <span>Year</span>
+          </div>
+        </div>
+      </div>
+      <div class="lg-6">
+        <h2>Upcoming Events</h2>
+        <p>Welcoming newly admitted students</p>
+      </div>
+      <div class="lg-2 flex align-center self-stretch">
+        <a href="#" class="btn primary full-width">RSVP</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!--  -->
+{% endblock content%}
