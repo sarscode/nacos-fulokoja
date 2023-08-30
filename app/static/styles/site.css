@@ -1,3 +1,19 @@
+.logo {
+  width: 75%;
+}
+
+.navbar {
+  padding: 1rem 0;
+}
+
+.navbar__nav {
+  display: none;
+}
+
+.navbar__navlink {
+  padding: 0.5rem 0.75rem;
+}
+
 .global-header {
   min-height: 40vh;
   background-color: var(--ui-color-green-50);
@@ -50,4 +66,14 @@
   margin-top: 1rem;
   border-radius: 8px;
   color: var(--ui-color-black);
+}
+
+@media screen and (min-width: 80em) {
+  .logo {
+    width: 100%;
+  }
+
+  .navbar__nav {
+    display: flex;
+  }
 }
