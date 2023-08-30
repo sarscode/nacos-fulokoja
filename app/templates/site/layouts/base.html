@@ -16,7 +16,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
       rel="stylesheet"
     />
     <!-- Custom Stylesheets -->
@@ -31,6 +31,10 @@
   </head>
   <body>
     {% block content %} {% endblock content %}
+    <!-- Global Site Partners Section -->
+    {% include 'site/includes/partners.html' %}
+    <!-- Global Site Footer CTA -->
+    {% include 'site/includes/footer_cta.html' %}
     <!-- Global Site Footer -->
     {% include 'site/includes/footer.html' %}
   </body>

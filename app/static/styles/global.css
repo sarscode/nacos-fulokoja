@@ -8,7 +8,7 @@
   --breakpoint-lg: "62em";
   --breakpoint-xl: "80em";
   --grid-gutter: 1%;
-  --font-family: "Fira Sans", sans-serif;
+  --font-family: "Inter", sans-serif;
   --font-weight-light: 300;
   --font-size-small: 0.75rem;
   --font-size-large: 1.25rem;
@@ -139,6 +139,17 @@ a.btn.full-width {
 
 .overflow-hidden {
   overflow: hidden;
+}
+
+.no-scrollbars::-webkit-scrollbar {
+  display: none;
+  width: 0 !important;
+}
+
+.no-scrollbars {
+  overflow: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 .flex {

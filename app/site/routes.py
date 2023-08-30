@@ -13,6 +13,14 @@ def home():
     return render_template('site/index.html', form=form)
 
 
+@blueprint.route('/about')
+def about():
+    form = SubscribeForm()
+    if form.validate_on_submit():
+        return redirect(url_for('site_blueprint.subscribe'))
+    return render_template('site/about.html', form=form)
+
+
 @blueprint.route('/subscribe', methods=['POST'])
 def subscribe():
     form = SubscribeForm()
@@ -25,8 +33,3 @@ def subscribe():
         db.session.add(subscriber)
         db.session.commit()
     return redirect(url_for('site_blueprint.home'))
-
-
-@blueprint.route('/register', methods=['GET', 'POST'])
-def register():
-    return render_template('site/register.html')
