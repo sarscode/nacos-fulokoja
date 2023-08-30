@@ -1,0 +1,38 @@
+{% extends 'site/layouts/auth.html' %}
+<!-- Page Title -->
+{% block title %} NACOS Fulokoja Chapter | Register - Become a Member {%
+endblock title %}
+<!--  -->
+{% block content %}
+<h2 class="text-center font-weight-light">Become a member</h2>
+<!-- Register Form -->
+<form action="" method="post">
+  {{ form.csrf_token }}
+  <div>{{form.email_address.label}}</div>
+  <div>
+    {{form.email_address(class='full-width form-control mb-1',
+    placeholder='you@fulokoja.edu.ng')}}
+  </div>
+  <div>{{form.matric_number.label}}</div>
+  <div>
+    {{form.matric_number(class='full-width form-control mb-1',
+    placeholder='sci19csc999')}}
+  </div>
+  <div>{{form.level.label}}</div>
+  <div>{{form.level(class='full-width form-control mb-1')}}</div>
+  <div>{{form.password.label}}</div>
+  <div>
+    {{form.password(class='full-width form-control mb-1',
+    placeholder='Password')}}
+  </div>
+  <button type="submit" class="btn primary mt-1 full-width">
+    Become a Member
+  </button>
+</form>
+<p class="font-size-small mt-1 text-center">
+  By clicking the “Become a Member” button, you agree to our terms.
+</p>
+<p class="text-center mt-1">
+  <a href="{{url_for('members_blueprint.login')}}">Already a member? Login</a>
+</p>
+{% endblock content %}

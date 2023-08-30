@@ -1,0 +1,27 @@
+{% extends 'site/layouts/auth.html' %}
+<!-- Page Title -->
+{% block title %} NACOS Fulokoja Chapter | Login to your portal {% endblock
+title %} {% block content %}
+<h2 class="text-center font-weight-light">Login</h2>
+<!-- Register Form -->
+<form action="" method="post">
+  {{ form.csrf_token }}
+  <div>{{form.email_address.label}}</div>
+  <div>
+    {{form.email_address(class='full-width form-control mb-1',
+    placeholder='you@fulokoja.edu.ng')}}
+  </div>
+  <div>{{form.password.label}}</div>
+  <div>
+    {{form.password(class='full-width form-control mb-1',
+    placeholder='Password')}}
+  </div>
+  <button type="submit" class="btn primary mt-1 full-width">Login</button>
+</form>
+<p class="font-size-small mt-1 text-center">
+  <a href="#">Forgot Password</a>
+</p>
+<p class="text-center mt-1">
+  <a href="{{url_for('members_blueprint.register')}}">Not a member? Register</a>
+</p>
+{% endblock content %}

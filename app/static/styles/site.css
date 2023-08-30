@@ -16,3 +16,24 @@
 .footer__navlink:hover {
   text-decoration: underline;
 }
+
+/* auth pages */
+.wrapper {
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: var(--ui-color-black);
+  color: var(--ui-color-white);
+}
+
+.form-container {
+  max-width: 480px;
+  margin: auto;
+}
+
+.form {
+  background-color: var(--ui-color-white);
+  padding: 1.5rem;
+  margin-top: 1rem;
+  border-radius: 8px;
+  color: var(--ui-color-black);
+}
