@@ -18,7 +18,15 @@ def about():
     form = SubscribeForm()
     if form.validate_on_submit():
         return redirect(url_for('site_blueprint.subscribe'))
-    return render_template('site/about.html', form=form)
+    return render_template('site/about.html', form=form, header_title='About Us', header_subtitle="We are Students IT Professionals in almost all tertiary institutions in Nigeria.")
+
+
+@blueprint.route('/executives')
+def executives():
+    form = SubscribeForm()
+    if form.validate_on_submit():
+        return redirect(url_for('site_blueprint.subscribe'))
+    return render_template('site/executives.html', form=form, header_title='Meet the Excos', header_subtitle="The NACOS FUL Chapter Executives oversee the affairs on the Nigeria Associate of Computing Student for Federal University Lokoja.")
 
 
 @blueprint.route('/subscribe', methods=['POST'])

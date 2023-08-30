@@ -1,3 +1,102 @@
 {% extends 'site/layouts/base.html' %}
 <!-- Page Title -->
 {% block title %} NACOS Fulokoja Chapter | About Us{% endblock title %}
+<!--  -->
+{% include 'site/includes/global_header.html' %}
+
+<!--  -->
+{% block content %}
+<section class="section">
+  <div class="container">
+    <h2>About NACOS</h2>
+    <div class="row">
+      <div class="xs-12 lg-7">
+        <p>
+          Nigeria Association of Computing Students (NACOS) was founded by
+          groups of students in July 1993 as Nigeria Association of Computer
+          Science (NACOS) with the backing of the Nigeria Computer Society (NCS)
+          as its parent body. It provides avenues for students (in any
+          IT-related field) to highlight and champion issues of interest in a
+          coordinated and organized manner. NACOS members (NACOSites) are
+          students studying in tertiary institutions in computer-related
+          disciplines including: Computer Science, Computer Engineering,
+          Information Technology, etc.
+        </p>
+        <h2 class="mt-2">NACOS Fulokoja Chapter</h2>
+        <p>
+          Nigeria Association of Computing Students (NACOS) was founded by
+          groups of students in July 1993 as Nigeria Association of Computer
+          Science (NACOS) with the backing of the Nigeria Computer Society (NCS)
+          as its parent body. It provides avenues for students (in any
+          IT-related field) to highlight and champion issues of interest in a
+          coordinated and organized manner. NACOS members (NACOSites) are
+          students studying in tertiary institutions in computer-related
+          disciplines including: Computer Science, Computer Engineering,
+          Information Technology, etc.
+        </p>
+      </div>
+      <div class="xs-12 lg-5 flex align-center justify-center">
+        <img
+          src="{{url_for('static', filename='images/nacos_national.png')}}"
+          alt="NACOS National Logo"
+          srcset=""
+        />
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section bg-dark">
+  <div class="container">
+    <h2>Our Mission</h2>
+    <div class="row">
+      <div class="xs-12 md-4">
+        <p>
+          To Become a network of committed Student IT Professionals determined
+          to stimulate the technology, innovation and entrepreneurship scene in
+          Nigeria.
+        </p>
+      </div>
+      <div class="xs-12 md-4">
+        <p>
+          To develop a vibrant ecosystem that drives digital inclusion across
+          all tertiary Institutions, Governments, Enterprises and Citizens for
+          the advancement of information technology in Nigeria.
+        </p>
+      </div>
+      <div class="xs-12 md-4">
+        <p>
+          Become the most sort after Students Organization in terms of
+          Information Technology and Entrepreneurship.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section bg-primary">
+  <div class="container">
+    <h2>Our Focus</h2>
+    <div class="row">
+      <div class="xs-12 md-4">
+        <p>
+          To serve both professional and public interests by fostering the open
+          interchange of information and by promoting the highest professional
+          and ethical standards.
+        </p>
+      </div>
+      <div class="xs-12 md-4">
+        <p>
+          To protect the image and safeguard the interest of the Computing
+          profession.
+        </p>
+      </div>
+      <div class="xs-12 md-4">
+        <p>
+          To promote the computing profession by organizing seminars, symposia,
+          webinars, computing contests, and other activities aimed at achieving
+          this goal.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock content %}
