@@ -141,6 +141,17 @@ a.btn.full-width {
   overflow: hidden;
 }
 
+.no-scrollbars::-webkit-scrollbar {
+  display: none;
+  width: 0 !important;
+}
+
+.no-scrollbars {
+  overflow: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
 .flex {
   display: flex;
 }
