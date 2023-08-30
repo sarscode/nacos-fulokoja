@@ -1,0 +1,36 @@
+<div class="navbar">
+  <div class="container">
+    <div class="flex justify-between align-center relative">
+      <a href="{{url_for('site_blueprint.home')}}" class="absolute">
+        <img
+          src="{{url_for('static', filename='images/nacos_ful.png')}}"
+          alt="Logo"
+          srcset=""
+          class="logo"
+        />
+      </a>
+      <nav class="navbar__nav">
+        <a href="{{url_for('site_blueprint.about')}}" class="navbar__navlink"
+          >About Us</a
+        >
+        <a
+          href="{{url_for('site_blueprint.executives')}}"
+          class="navbar__navlink"
+          >Executives</a
+        >
+        <a href="#" class="navbar__navlink">Blog</a>
+        <a
+          href="{{url_for('members_blueprint.login')}}"
+          class="navbar__navlink font-weight-bold"
+          >Login</a
+        >
+        <a
+          href="{{url_for('members_blueprint.register')}}"
+          class="navbar__navlink"
+        >
+          <span class="btn primary">Become a Member</span>
+        </a>
+      </nav>
+    </div>
+  </div>
+</div>

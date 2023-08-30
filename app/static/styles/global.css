@@ -10,6 +10,7 @@
   --grid-gutter: 1%;
   --font-family: "Inter", sans-serif;
   --font-weight-light: 300;
+  --font-weight-bold: 600;
   --font-size-small: 0.75rem;
   --font-size-large: 1.25rem;
 }
@@ -126,6 +127,10 @@ input.form-control {
   margin-bottom: 2rem;
 }
 
+.p-1 {
+  padding: 1rem;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -146,6 +151,10 @@ input.form-control {
 
 .font-weight-light {
   font-weight: var(--font-weight-light);
+}
+
+.font-weight-bold {
+  font-weight: var(--font-weight-bold);
 }
 
 /* Layout */
