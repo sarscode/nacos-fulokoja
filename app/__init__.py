@@ -4,7 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 
 
-MODULES = ['site']
+MODULES = ['site', 'members']
 
 db = SQLAlchemy()
 migrate = Migrate()

@@ -41,15 +41,27 @@ a {
   text-decoration: none;
 }
 
-input {
+input,
+select {
   border: none;
   border-radius: 0.25rem;
   padding: 0.75rem;
 }
 
+select {
+  border: 1px solid var(--ui-color-black);
+  padding-right: 0.5rem;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
 button {
   border: none;
   border-radius: 0.25rem;
+  cursor: pointer;
 }
 
 .img {
@@ -62,6 +74,20 @@ a.btn {
 
 a.btn.full-width {
   text-align: center;
+}
+
+input.form-control {
+  border: 1px solid var(--ui-color-black);
+}
+
+.bg-primary {
+  background-color: var(--ui-color-green);
+  color: var(--ui-color-white);
+}
+
+.bg-dark {
+  background-color: var(--ui-color-black);
+  color: var(--ui-color-white);
 }
 
 .btn {
@@ -90,6 +116,19 @@ a.btn.full-width {
 
 .mt-2 {
   margin-top: 2rem;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Typography */

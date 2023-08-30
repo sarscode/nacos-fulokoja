@@ -34,8 +34,16 @@
         <div class="xs-6">
           <h3>Membership</h3>
           <div class="flex column">
-            <a href="#" class="footer__navlink">Register</a>
-            <a href="#" class="footer__navlink">Login</a>
+            <a
+              href="{{url_for('members_blueprint.register')}}"
+              class="footer__navlink"
+              >Register</a
+            >
+            <a
+              href="{{url_for('members_blueprint.login')}}"
+              class="footer__navlink"
+              >Login</a
+            >
             <a href="#" class="footer__navlink">Pay Dues</a>
           </div>
         </div>
