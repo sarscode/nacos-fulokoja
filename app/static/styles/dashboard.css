@@ -1,0 +1,47 @@
+.logo {
+  width: 75%;
+}
+
+.navbar {
+  padding: 1rem 0;
+}
+
+.navbar__navlink {
+  padding: 0.5rem 0.75rem;
+}
+
+.dashboard-header {
+  background-color: var(--ui-color-green-50);
+  min-height: 20vh;
+  padding: 1rem 0;
+}
+
+.user_avatar {
+  max-width: 180px;
+  max-height: 180px;
+}
+
+.events {
+  padding: 1.5rem 1rem;
+  border-radius: 8px;
+}
+
+.cta {
+  border: 1px solid var(--ui-color-green);
+  padding: 1.25rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cta:hover {
+  background-color: var(--ui-color-green-50);
+}
+
+@media screen and (min-width: 80em) {
+  .logo {
+    width: 100%;
+  }
+}
