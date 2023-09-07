@@ -8,6 +8,16 @@ endblock title %}
 <!-- Register Form -->
 <form action="" method="post">
   {{ form.csrf_token }}
+  <div>{{form.first_name.label}}</div>
+  <div>
+    {{form.first_name(class='full-width form-control mb-1' , placeholder='Enter
+    your first name')}}
+  </div>
+  <div>{{form.last_name.label}}</div>
+  <div>
+    {{form.last_name(class='full-width form-control mb-1', placeholder='Enter
+    your last name')}}
+  </div>
   <div>{{form.email_address.label}}</div>
   <div>
     {{form.email_address(class='full-width form-control mb-1',
