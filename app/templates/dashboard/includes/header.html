@@ -1,0 +1,32 @@
+<header class="dashboard-header flex align-center">
+  <div class="container">
+    <div class="row align-center">
+      <div class="xs-12 md-2">
+        <img
+          src="{{url_for('static', filename='images/user_avatar.png')}}"
+          alt="user photo"
+          class="user_avatar"
+        />
+      </div>
+      <div class="xs-12 md-8">
+        <div class="flex align-center full-height">
+          <div class="mt-1 mb-2">
+            <h2 class="mb-0">
+              <span class="font-weight-light">Welcome,</span>
+              {{ user.first_name}}
+            </h2>
+            <h3 class="font-weight-light mb-0">
+              {{user.matric_number.upper()}}
+            </h3>
+            <h3 class="mb-0">
+              {{ user.level}} <span class="font-weight-light">Level</span>
+            </h3>
+          </div>
+        </div>
+      </div>
+      <div class="xs-12 md-2">
+        <a href="#" class="btn primary full-width">Profile</a>
+      </div>
+    </div>
+  </div>
+</header>

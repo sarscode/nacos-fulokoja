@@ -8,7 +8,7 @@ from app import mail
 from app.members import blueprint
 from app.members.forms import LoginForm, RegisterForm
 from app.members.models import User
-from app.members.utils import create_verification_mail, hash_password
+from app.members.utils import create_verification_mail, hash_password, verify_password
 
 
 @login_manager.user_loader
@@ -48,13 +48,35 @@ def register():
         email_thread.start()
 
         return redirect(url_for('members_blueprint.login'))
+
+    if current_user.is_authenticated:
+        return redirect(url_for('members_blueprint.dashboard'))
+
     return render_template('site/register.html', form=form)
 
 
 @blueprint.route('/login', methods=['GET', 'POST'])
 def login():
     form = LoginForm()
+    if form.validate_on_submit():
+        user = User.query.filter_by(email=form.email_address.data).first()
+        if user and verify_password(user.password, form.password.data):
+            login_user(user)
+            return redirect(url_for('members_blueprint.dashboard'))
+        else:
+            flash('Invalid email address or password', 'error')
+            return redirect(url_for('members_blueprint.login'))
+
+    if current_user.is_authenticated:
+        return redirect(url_for('members_blueprint.dashboard'))
     return render_template('site/login.html', form=form)
+
+
+@blueprint.route('/logout', methods=['GET', 'POST'])
+@login_required
+def logout():
+    logout_user()
+    return redirect(url_for('members_blueprint.login'))
 
 
 @blueprint.route('/email_verification', methods=['GET', 'POST'])
@@ -70,3 +92,9 @@ def verify_email():
             f'Email verification for {token["sub"]} was successful', 'success')
 
     return redirect(url_for('members_blueprint.login'))
+
+
+@blueprint.route('/dashboard', methods=['GET', 'POST'])
+@login_required
+def dashboard():
+    return render_template('dashboard/dashboard.html', user=current_user)

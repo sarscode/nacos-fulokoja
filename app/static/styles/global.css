@@ -127,6 +127,10 @@ input.form-control {
   margin-bottom: 2rem;
 }
 
+.mb-0 {
+  margin-bottom: 0;
+}
+
 .p-1 {
   padding: 1rem;
 }
