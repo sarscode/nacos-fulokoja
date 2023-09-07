@@ -68,8 +68,8 @@
   color: var(--ui-color-black);
 }
 
-.excutives {
-  max-height: 312px;
+.executives {
+  max-height: 278px;
   overflow-y: clip;
 }
 
